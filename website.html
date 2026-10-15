@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsLearn - Best IT Training Institute in Nepal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ==============================
+   GLOBAL RESET
+================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8faff;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* ==============================
+   HEADER
+================================ */
+        #header-site {
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-wrap {
+            max-width: 1200px;
+            height: 80px;
+            margin: 0 auto;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+
+        /* ==============================
+   LOGO
+================================ */
+        .header-logo {
+            width: 150px;
+            flex-shrink: 0;
+        }
+
+        .header-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+
+        /* ==============================
+   NAVIGATION
+================================ */
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            position: relative;
+
+            color: #333;
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            transition: color 0.3s ease;
+        }
+
+        /* Underline hover effect */
+        nav ul li a::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+
+            width: 0;
+            height: 2px;
+
+            background: #ffffff;
+
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #222;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+
+        /* ==============================
+   REGISTER BUTTON
+================================ */
+        .header-button {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .header-button button {
+            border: none;
+            outline: none;
+
+            padding: 12px 22px;
+
+            border-radius: 6px;
+
+            background: #ffffff;
+            color: #fff;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.25);
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .header-button button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.35);
+        }
+
+
+        /* ==============================
+   HERO SECTION
+================================ */
+        .hero-site {
+            width: 100%;
+
+            background:
+                linear-gradient(135deg,
+                    #eef7ff 0%,
+                    #ffffff 55%,
+                    #eaf4ff 100%);
+
+            overflow: hidden;
+        }
+
+        .hero-wrap {
+            max-width: 1200px;
+            min-height: 650px;
+
+            margin: 0 auto;
+            padding: 70px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 60px;
+        }
+
+
+        /* ==============================
+   HERO CONTENT
+================================ */
+        .hero-contant {
+            width: 55%;
+        }
+
+        .hero-contant h1 {
+            max-width: 650px;
+
+            font-size: 52px;
+            line-height: 1.15;
+
+            color: #172b4d;
+
+            font-weight: 700;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-contant h1 span {
+            color: #222;
+            display: inline;
+        }
+
+        .hero-contant p {
+            max-width: 650px;
+
+            color: #5f6b7a;
+
+            font-size: 16px;
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ==============================
+   HERO BUTTONS
+================================ */
+        .hero-button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .hero-button button,
+        .hero-button .btn-outline {
+            border: none;
+            outline: none;
+
+            padding: 14px 28px;
+
+            border-radius: 6px;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+        /* Enroll button */
+        .hero-button button:first-child {
+            background: #ffffff;
+            color: #fff;
+
+            box-shadow: 0 7px 20px rgba(0, 123, 255, 0.25);
+        }
+
+        .hero-button button:first-child:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.35);
+        }
+
+        /* View courses link (styled as outline button) */
+        .hero-button .btn-outline {
+            display: inline-block;
+            background: #ffffff;
+            color: #222;
+            text-decoration: none;
+
+            border: 1px solid #007bff;
+        }
+
+        .hero-button .btn-outline:hover {
+            background: #ffffff;
+            color: #ffffff;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* ==============================
+   HERO IMAGE
+================================ */
+        .hero-image {
+            width: 45%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+
+            border-radius: 20px;
+
+            object-fit: cover;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.15);
+
+            transition: transform 0.4s ease;
+        }
+
+        .hero-image img:hover {
+            transform: translateY(-8px);
+        }
+
+
+        /* ==============================
+   TABLET
+================================ */
+        @media (max-width: 992px) {
+
+            .header-wrap {
+                padding: 0 20px;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 18px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .header-button button {
+                padding: 10px 16px;
+            }
+
+            .hero-wrap {
+                padding: 60px 25px;
+                gap: 40px;
+            }
+
+            .hero-contant h1 {
+                font-size: 42px;
+            }
+
+            .hero-contant p {
+                font-size: 15px;
+            }
+        }
+
+
+        /* ==============================
+   MOBILE
+================================ */
+        @media (max-width: 768px) {
+
+            .header-wrap {
+                height: auto;
+
+                padding: 20px;
+
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .header-logo {
+                width: 160px;
+            }
+
+            nav {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            nav ul {
+                width: 100%;
+
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                gap: 15px 25px;
+            }
+
+            .header-button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .header-button button {
+                width: 180px;
+            }
+
+
+            /* Hero */
+            .hero-wrap {
+                min-height: auto;
+
+                padding: 60px 20px;
+
+                flex-direction: column;
+                text-align: center;
+
+                gap: 45px;
+            }
+
+            .hero-contant {
+                width: 100%;
+            }
+
+            .hero-contant h1 {
+                font-size: 40px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-contant p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-button {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-image img {
+                max-width: 550px;
+            }
+        }
+
+
+        /* ==============================
+   SMALL MOBILE
+================================ */
+        @media (max-width: 480px) {
+
+            .header-wrap {
+                padding: 18px 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .header-button button {
+                width: 100%;
+            }
+
+            .hero-wrap {
+                padding: 45px 18px;
+            }
+
+            .hero-contant h1 {
+                font-size: 32px;
+            }
+
+            .hero-contant p {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .hero-button {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .hero-button button,
+            .hero-button .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-image img {
+                border-radius: 12px;
+            }
+        }
+
+        /* ==============================
+   ABOUT SECTION
+================================ */
+        .about-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 50px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Heading and Intro */
+        .about-wrap {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-wrap h1 {
+            font-size: 42px;
+            color: #172b4d;
+            margin-bottom: 15px;
+        }
+
+        .about-wrap h1 span {
+            color: #222;
+        }
+
+        .about-wrap p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 17px;
+            color: #666;
+        }
+
+        /* About Content */
+        .about-section .about {
+            padding: 25px;
+            background: #f8faff;
+            border-left: 5px solid #007bff;
+            border-radius: 10px;
+        }
+
+        .about-section .about p {
+            font-size: 16px;
+            color: #444;
+        }
+
+        .about-section .about b {
+            display: block;
+            font-size: 24px;
+            color: #172b4d;
+            margin-bottom: 15px;
+        }
+
+        /* List */
+        .about-section ul {
+            list-style: none;
+            margin-top: 15px;
+            padding-left: 0;
+        }
+
+        .about-section li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .about-section li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #222;
+            font-weight: bold;
+        }
+
+        /* Image */
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 450px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+            margin: 0 auto;
+
+            transition: transform 0.3s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-section {
+                margin: 30px 15px;
+                padding: 30px 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .about-wrap h1 {
+                font-size: 32px;
+            }
+
+            .about-wrap p {
+                font-size: 15px;
+            }
+
+            .about-section .about {
+                padding: 20px;
+            }
+
+            .about-image img {
+                max-width: 100%;
+                height: 250px;
+            }
+        }
+
+        /* ==================
+   SERVICE SECTION
+============================== */
+        .service-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .service-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .service-wrap h1 {
+            font-size: 2rem;
+            color: #1a1a2e;
+            margin-bottom: 16px;
+        }
+
+        .service-wrap p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .service-section .image {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 220px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-details {
+            padding: 14px;
+            text-align: left;
+        }
+
+        .product-details h3 {
+            font-size: 1.1rem;
+            margin: 0 0 6px;
+            color: #1a1a2e;
+        }
+
+        .product-details p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0 0 10px;
+        }
+
+        .product-details .price {
+            font-weight: 600;
+            color: #e63946;
+            font-size: 1rem;
+        }
+
+        /* ==============================
+   CONDUCT SECTION (single clean block —
+   the old absolute-overlay version and the
+   duplicate override block have been merged
+   into this one definition)
+================================ */
+
+       .contact-site{display:none;}
+.contact-site.active{display:block;
+      padding:60px 20px;
+       }
+       .contact-site .contact-wrapper{
+        display: flex;
+       }
+       .contact-site .contact-wrapper .contact-details{
+        display:flex;
+        flex-direction: column;
+        border:1px solid black;
+
+       }
+        .contact-site .contact-wrapper .contact-details ul{
+            text-decoration: none;
+            list-style: none;
+        }
+
+    
+
+        .conduct-section {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 80px 8%;
+            background: #f5f8fc;
+            box-sizing: border-box;
+        }
+
+        .conduct-details {
+            flex: 1;
+        }
+
+        .conduct-details h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            color: #172b4d;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .conduct-details h1 strong {
+            color: #222;
+        }
+
+        .conduct-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .conduct-details li {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 35px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .conduct-details li strong {
+            display: block;
+            color: #172b4d;
+            margin-bottom: 4px;
+        }
+
+        .conduct-details li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 2px;
+
+            width: 24px;
+            height: 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #ffffff;
+            color: white;
+            border-radius: 50%;
+
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+      
+      
+
+        /* Tablet */
+        @media (max-width: 900px) {
+            .conduct-section {
+                padding: 60px 5%;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .conduct-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .conduct-details ul {
+                text-align: left;
+            }
+
+            .conduct-details h1 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .conduct-details li {
+                font-size: 15px;
+                margin-bottom: 18px;
+                padding-left: 32px;
+            }
+        }
+        /* ==============================
+   FOOTER
+================================ */
+        .site-footer {
+            width: 100%;
+            background: #000000;
+            color: #d9d9d9;
+            padding: 60px 8% 25px;
+        }
+
+        .footer-wrap {
+            max-width: 1300px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+            gap: 40px;
+        }
+
+        .footer-wrap h4 {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* Brand column */
+        .footer-brand .footer-logo {
+            width: 170px;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #b5b5b5;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-socials a {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .footer-socials a:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        .footer-socials a.facebook {
+            background: #3b5998;
+        }
+
+        .footer-socials a.twitter {
+            background: #1da1f2;
+        }
+
+        .footer-socials a.youtube {
+            background: #ff0000;
+        }
+
+        .footer-socials a.instagram {
+            background: #833ab4;
+        }
+
+        .footer-socials a.tiktok {
+            background: #555555;
+        }
+
+        .footer-socials a.whatsapp {
+            background: #25d366;
+        }
+
+        /* Quick link + generic list columns */
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #cfcfcf;
+            text-decoration: none;
+            font-size: 15px;
+
+            transition: color 0.25s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00bfff;
+        }
+
+        /* Contact column */
+        .footer-contact ul {
+            list-style: none;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            font-size: 15px;
+            color: #cfcfcf;
+            line-height: 1.5;
+        }
+
+        .footer-contact li .icon {
+            flex-shrink: 0;
+            width: 18px;
+            margin-top: 3px;
+            color: #00bfff;
+        }
+
+        /* Newsletter column */
+        .footer-newsletter input {
+            width: 100%;
+
+            padding: 14px 18px;
+
+            border: none;
+            outline: none;
+            border-radius: 4px;
+
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .footer-newsletter button {
+            width: 100%;
+
+            padding: 14px 18px;
+
+            border: none;
+            outline: none;
+            border-radius: 4px;
+
+            background: #ffffff;
+            color: #ffffff;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: background 0.3s ease;
+        }
+
+        .footer-newsletter button:hover {
+            background: #0056b3;
+        }
+
+        /* Bottom bar */
+        .footer-bottom {
+            max-width: 1300px;
+            margin: 45px auto 0;
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+            text-align: center;
+
+            font-size: 14px;
+            color: #b5b5b5;
+        }
+
+        /* Tablet */
+        @media (max-width: 992px) {
+            .footer-wrap {
+                grid-template-columns: 1fr 1fr;
+                row-gap: 40px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .site-footer {
+                padding: 45px 6% 20px;
+            }
+
+            .footer-wrap {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+        }
+
+        .conduct-section {
+            height: 100vh;
+            width: 100%;
+          
+
+        }
+.conduct-image {
+    width: 50%;
+    height: 400px; /* Example height */
+    
+}
+
+.conduct-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.register-section{
+    padding:80px 5%;
+    background:#f8fbff;
+}
+
+.register-box{
+    max-width:700px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.register-box h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#172b4d;
+}
+
+.register-box input,
+.register-box select,
+.register-box textarea{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.register-box textarea{
+    height:120px;
+    resize:none;
+}
+
+.register-box button{
+    width:100%;
+    padding:15px;
+    background:#007bff;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-box button:hover{
+    background:#0056b3;
+    transform:translateY(-2px);
+}
+
+
+/* ==============================
+   EXTRA SECTIONS
+================================ */
+.after-see-section,
+.events-section {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.events-section {
+    background: #f5f8fc;
+}
+
+.simple-section-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.simple-section-wrap h2 {
+    font-size: 38px;
+    color: #172b4d;
+    margin-bottom: 12px;
+}
+
+.simple-section-wrap h2 span {
+    color: #222;
+}
+
+.simple-section-wrap > p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #666;
+}
+
+.simple-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.simple-card {
+    width: 300px;
+    padding: 30px 22px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.simple-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.simple-card i {
+    font-size: 35px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.simple-card h3 {
+    color: #172b4d;
+    margin-bottom: 10px;
+}
+
+.simple-card p {
+    color: #666;
+    font-size: 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .simple-section-wrap h2 {
+        font-size: 30px;
+    }
+
+    .simple-card {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+/* ==============================
+   REGISTER MODAL
+================================ */
+.register-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.55);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.register-modal.active {
+    display: flex;
+}
+
+.register-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    animation: registerPopup .25s ease;
+}
+
+.register-modal-content h2 {
+    text-align: center;
+    color: #172b4d;
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.register-modal-content .register-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.register-modal-content input,
+.register-modal-content select,
+.register-modal-content textarea {
+    width: 100%;
+    padding: 13px 15px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+.register-modal-content input:focus,
+.register-modal-content select:focus,
+.register-modal-content textarea:focus {
+    border-color: #222;
+}
+
+.register-modal-content textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.register-submit {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: #ffffff;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.register-submit:hover {
+    background: #0056b3;
+}
+
+.register-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: #f1f3f5;
+    border-radius: 50%;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+.register-close:hover {
+    background: #e2e6ea;
+}
+
+@keyframes registerPopup {
+    from { opacity: 0; transform: translateY(-15px) scale(.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 600px) {
+    .register-modal-content {
+        padding: 25px 18px;
+    }
+
+    .register-modal-content h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* Contact cleanup */
+.contact-site .contact-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-site .contact-details {
+    flex: 1;
+    padding: 35px;
+    border: none;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-site .contact-image {
+    flex: 1;
+}
+
+.contact-site .contact-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    margin: auto;
+}
+
+
+/* ==============================
+   NAV BAR + CONTACT
+================================ */
+#header-site {
+    background: linear-gradient(135deg, #0b5ed7, #007bff);
+    color: #fff;
+}
+
+#header-site > span {
+    color: #fff;
+}
+
+.header-wrap {
+    background: rgba(255,255,255,.08);
+    border-radius: 12px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #dff0ff;
+}
+
+nav ul li a::after {
+    background: #fff;
+}
+
+.header-button button {
+    background: #fff;
+    color: #222;
+}
+
+.header-button button:hover {
+    background: #f0f7ff;
+    color: #222;
+}
+
+.contact-site {
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #eef7ff, #ffffff);
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-heading > span {
+    color: #222;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-heading h2 {
+    color: #172b4d;
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.contact-heading h2 strong {
+    color: #222;
+}
+
+.contact-heading p {
+    color: #666;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.09);
+}
+
+.contact-card h3 {
+    color: #172b4d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.contact-table tr:last-child {
+    border-bottom: none;
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 15px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.contact-table th {
+    width: 130px;
+    color: #222;
+    font-weight: 700;
+}
+
+.contact-table td {
+    color: #444;
+}
+
+.contact-message {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-message > i {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf4ff;
+    color: #222;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.contact-message p {
+    color: #666;
+    margin-bottom: 22px;
+}
+
+.contact-message button {
+    border: none;
+    background: #ffffff;
+    color: #fff;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact-message button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    #header-site > span {
+        display: none;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-heading h2 {
+        font-size: 32px;
+    }
+
+    .contact-card {
+        padding: 22px 18px;
+    }
+
+    .contact-table th {
+        width: 95px;
+    }
+}
+
+
+/* Clear, prominent LetsLearn header logo */
+.header-logo {
+    width: 190px !important;
+    height: 62px !important;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+}
+
+.header-logo img {
+    width: 190px !important;
+    height: 58px !important;
+    max-width: none !important;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        width: 150px !important;
+        height: 52px !important;
+    }
+    .header-logo img {
+        width: 150px !important;
+        height: 50px !important;
+    }
+}
+
+
+/* Remove blue from header */
+#header-site {
+    background: #ffffff !important;
+}
+nav ul li a {
+    color: #222 !important;
+}
+nav ul li a:hover {
+    color: #555 !important;
+}
+
+
+/* Final navigation polish */
+.header-wrap{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:10px 24px!important;}
+.nav-brand{display:flex!important;align-items:center;margin-right:auto!important;flex-shrink:0;}
+.nav-brand img{width:185px!important;height:auto!important;max-height:58px!important;object-fit:contain;}
+.header-wrap nav{margin-left:auto;}
+.header-wrap nav ul{display:flex;align-items:center;gap:28px;}
+.header-wrap nav a{font-weight:600;text-decoration:none;}
+.header-button{margin-left:8px;}
+@media(max-width:900px){
+  .header-wrap{flex-wrap:wrap;gap:14px;}
+  .header-wrap nav{order:3;width:100%;margin:0;}
+  .header-wrap nav ul{justify-content:center;flex-wrap:wrap;gap:12px 20px;}
+  .nav-brand img{width:165px!important;}
+  .header-button{margin-left:auto;}
+}
+
+.contact-site{display:none!important;}.contact-site.active{display:block!important;}
+</style>
+
+<style>
+:root{
+  --primary:#1268e5;
+  --primary-dark:#0b4fb3;
+  --ink:#12233f;
+  --muted:#64748b;
+  --soft:#f5f8fd;
+  --line:#e7edf5;
+  --white:#fff;
+}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#fff;color:var(--ink)}
+#header-site{position:sticky!important;top:0;background:#fff!important;box-shadow:0 8px 30px rgba(15,35,65,.08)!important}
+.topbar{background:#0f2442;color:#dce8f8;font-size:12px}
+.topbar-inner{max-width:1200px;margin:auto;padding:8px 25px;display:flex;justify-content:flex-end;gap:26px;align-items:center}
+.topbar i{color:#74a9ff;margin-right:6px}
+.topbar .scholarship{color:#fff;font-weight:700}
+.header-wrap{height:82px!important;max-width:1200px!important}
+.header-logo{width:190px!important;height:62px;display:flex;align-items:center;overflow:visible!important}
+.header-logo img{width:190px!important;height:58px!important;object-fit:contain}
+nav ul{gap:27px!important}
+nav ul li a{font-size:14px!important;color:#26364d!important}
+nav ul li a:hover{color:var(--primary)!important}
+.header-button button{border-radius:9px!important;padding:12px 20px!important;background:var(--primary)!important;box-shadow:0 8px 22px rgba(18,104,229,.22)!important}
+.header-button button:hover{background:var(--primary-dark)!important}
+
+.hero-site{background:linear-gradient(135deg,#f3f8ff 0%,#fff 48%,#eef5ff 100%)!important}
+.hero-wrap{max-width:1200px!important;min-height:650px!important;padding:75px 25px!important}
+.hero-contant{width:56%!important}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e7f0ff;color:var(--primary);border:1px solid #d6e5ff;padding:8px 13px;border-radius:999px;font-size:13px;font-weight:800;margin-bottom:20px}
+.hero-contant h1{font-size:58px!important;letter-spacing:-1.7px!important;color:#102443!important;margin-bottom:20px!important}
+.hero-contant h1 span{color:var(--primary)!important}
+.hero-contant p{font-size:16px!important;color:#5d6d82!important;max-width:620px!important}
+.hero-button button,.hero-button .btn-outline{border-radius:10px!important;padding:14px 24px!important}
+.hero-button button:first-child{background:var(--primary)!important}
+.hero-button button i{margin-left:7px}
+.hero-trust{display:flex;gap:30px;margin-top:34px;padding-top:22px;border-top:1px solid #dfe8f3}
+.hero-trust div{display:flex;flex-direction:column}
+.hero-trust strong{font-size:24px;color:var(--ink)}
+.hero-trust span{font-size:12px;color:var(--muted)}
+.hero-image{width:44%!important;position:relative}
+.hero-image:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#dceaff;right:-35px;top:-35px;z-index:0}
+.hero-image img{position:relative;z-index:1;max-width:500px!important;border-radius:24px!important;box-shadow:0 25px 60px rgba(24,55,100,.18)!important}
+
+.about-section{max-width:1200px!important;margin:75px auto!important;padding:65px!important;border-radius:24px!important;box-shadow:0 16px 45px rgba(30,55,90,.08)!important;border:1px solid #edf2f8}
+.about-wrap h1{font-size:42px!important;letter-spacing:-.8px}
+.about-wrap p{color:var(--muted)!important}
+.about-section .about{background:#f7faff!important;border-left:4px solid var(--primary)!important;border-radius:14px!important}
+.about-section li::before{color:var(--primary)!important}
+.about-image img{border-radius:18px!important;box-shadow:0 16px 35px rgba(20,45,80,.15)!important}
+
+.service-section{background:#f7f9fc!important;padding:90px 20px!important}
+.service-wrap h1{font-size:40px!important;color:var(--ink)!important;letter-spacing:-.8px}
+.service-wrap p{color:var(--muted)!important}
+.service-section .image{max-width:1200px;margin:45px auto 0!important;gap:24px!important}
+.product-card{width:calc(33.333% - 16px)!important;max-width:360px;border:1px solid #e6edf6!important;border-radius:18px!important;box-shadow:0 10px 30px rgba(20,50,90,.07)!important;transition:.3s!important}
+.product-card:hover{transform:translateY(-8px)!important;box-shadow:0 18px 40px rgba(20,50,90,.13)!important}
+.product-card img{height:210px!important}
+.product-details{padding:22px!important}
+.product-details h3{font-size:20px!important;color:var(--ink)!important}
+.product-details p{min-height:50px;color:var(--muted)!important;line-height:1.6}
+.course-meta{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #edf1f6;padding-top:14px;margin-top:14px;font-size:13px;color:#718096}
+.course-meta .price{color:var(--primary);font-size:16px;font-weight:800}
+
+.feature-strip{max-width:1200px;margin:0 auto;padding:26px 25px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.feature-item{display:flex;align-items:center;gap:14px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.feature-item>i{width:42px;height:42px;display:grid;place-items:center;background:#eaf2ff;color:var(--primary);border-radius:12px}
+.feature-item div{display:flex;flex-direction:column}
+.feature-item strong{font-size:14px}
+.feature-item span{font-size:12px;color:var(--muted)}
+
+.after-see-section,.events-section{padding:85px 20px!important;background:#fff!important}
+.events-section{background:#f7f9fc!important}
+.simple-section-wrap{max-width:1100px!important;margin:auto!important;text-align:center}
+.simple-section-wrap h2{font-size:40px!important;color:var(--ink)!important;letter-spacing:-.8px}
+.simple-section-wrap h2 span{color:var(--primary)!important}
+.simple-section-wrap>p{color:var(--muted)!important;margin-bottom:40px}
+.simple-cards{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:22px!important}
+.simple-card{background:#fff!important;border:1px solid #e6edf5!important;border-radius:18px!important;padding:30px!important;box-shadow:0 10px 28px rgba(20,50,90,.06)!important;transition:.3s}
+.simple-card:hover{transform:translateY(-6px);box-shadow:0 16px 35px rgba(20,50,90,.11)!important}
+.simple-card i{width:54px;height:54px;display:grid;place-items:center;margin:0 auto 18px;background:#eaf2ff;color:var(--primary);border-radius:15px;font-size:22px}
+.simple-card h3{color:var(--ink);margin-bottom:8px}
+.simple-card p{color:var(--muted);font-size:14px}
+
+.contact-site{display:none;}
+.contact-site.active{display:block;padding:90px 20px!important;background:linear-gradient(135deg,#0f2442,#163a68)!important}
+.contact-container{max-width:1100px!important;margin:auto}
+.contact-heading{text-align:center;color:#fff;margin-bottom:42px}
+.contact-heading span{font-size:12px;letter-spacing:2px;color:#9fc5ff;font-weight:800}
+.contact-heading h2{font-size:42px;margin:8px 0;color:#fff}
+.contact-heading h2 strong{color:#75b0ff}
+.contact-heading p{color:#c9d7e8}
+.contact-content{display:grid!important;grid-template-columns:1.5fr .8fr!important;gap:24px!important}
+.contact-card{background:#fff!important;border:0!important;border-radius:18px!important;padding:30px!important;box-shadow:0 15px 40px rgba(0,0,0,.15)!important}
+.contact-card h3{color:var(--ink);margin-bottom:18px}
+.contact-table{width:100%;border-collapse:collapse}
+.contact-table th,.contact-table td{padding:15px 12px;border-bottom:1px solid #edf1f5;text-align:left}
+.contact-table th{width:110px;color:#607089;font-size:13px}
+.contact-table td{color:#1e3049;font-weight:600}
+.contact-message{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.contact-message>i{font-size:42px;color:var(--primary);margin-bottom:16px}
+.contact-message p{color:var(--muted);font-size:14px;margin-bottom:22px}
+.contact-message button{border:0;border-radius:9px;background:var(--primary);color:#fff;padding:13px 22px;font-weight:700;cursor:pointer}
+
+.conduct-section{height:auto!important;min-height:0!important;padding:90px 8%!important;background:#fff!important}
+.conduct-details h1{font-size:40px!important}
+.conduct-details h1 strong{color:var(--primary)!important;display:inline}
+.conduct-details li::before{background:var(--primary)!important}
+.conduct-image{height:430px!important}
+.conduct-image img{border-radius:20px;box-shadow:0 18px 40px rgba(20,50,90,.13)}
+
+.final-cta{max-width:1150px;margin:70px auto;padding:48px 55px;border-radius:24px;background:linear-gradient(135deg,#1268e5,#0c4da9);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px;box-shadow:0 20px 50px rgba(18,104,229,.22)}
+.final-cta span{font-size:11px;letter-spacing:2px;font-weight:800;opacity:.8}
+.final-cta h2{font-size:34px;margin:7px 0}
+.final-cta p{margin:0;opacity:.86}
+.final-cta button{border:0;background:#fff;color:#0d56b9;border-radius:10px;padding:14px 22px;font-weight:800;white-space:nowrap;cursor:pointer}
+.final-cta button i{margin-left:7px}
+
+.site-footer{background:#081321!important}
+.footer-logo{width:190px!important}
+.footer-bottom{color:#8fa0b6!important}
+
+@media(max-width:900px){
+ .topbar-inner{justify-content:center;flex-wrap:wrap;gap:10px 18px}
+ .hero-contant{width:100%!important}
+ .hero-image{width:100%!important}
+ .hero-wrap{flex-direction:column!important}
+ .feature-strip{grid-template-columns:1fr 1fr}
+ .product-card{width:calc(50% - 12px)!important}
+ .simple-cards{grid-template-columns:1fr!important}
+ .contact-content{grid-template-columns:1fr!important}
+ .conduct-section{flex-direction:column!important}
+ .conduct-image{width:100%!important}
+ .final-cta{margin:50px 20px;padding:35px;flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){
+ .topbar{display:none}
+ .header-wrap{height:auto!important;padding:14px 18px!important}
+ .header-logo{width:155px!important;height:55px}
+ .header-logo img{width:155px!important;height:52px!important}
+ nav ul{gap:12px 18px!important}
+ nav ul li a{font-size:13px!important}
+ .header-button button{width:160px}
+ .hero-wrap{padding:55px 20px!important}
+ .hero-contant h1{font-size:39px!important}
+ .hero-trust{gap:16px;justify-content:center}
+ .hero-trust strong{font-size:20px}
+ .about-section{margin:35px 15px!important;padding:30px 20px!important}
+ .about-wrap h1,.service-wrap h1,.simple-section-wrap h2,.contact-heading h2{font-size:30px!important}
+ .service-section{padding:65px 15px!important}
+ .product-card{width:100%!important;max-width:100%}
+ .feature-strip{grid-template-columns:1fr;padding:20px 15px}
+ .contact-site{display:none;}
+.contact-site.active{display:block;padding:65px 15px!important}
+ .contact-card{padding:20px}
+ .contact-table th,.contact-table td{padding:12px 7px;font-size:13px}
+ .conduct-section{padding:65px 20px!important}
+ .final-cta{margin:35px 15px;padding:30px 24px}
+ .final-cta h2{font-size:27px}
+}
+</style>
+
+
+<style>
+.header-wrap{display:flex!important;align-items:center!important;gap:28px!important}
+.header-wrap nav{flex:1}
+.nav-brand{display:flex!important;align-items:center!important;flex:0 0 auto}
+.nav-brand img{width:145px!important;height:52px!important;object-fit:contain!important;display:block}
+nav ul{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:23px!important}
+nav ul li a{white-space:nowrap!important}
+.contact-content{align-items:stretch!important}
+.student-table-card{min-width:0}
+.table-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.table-title h3{margin:4px 0 0!important;font-size:25px!important}
+.mini-label{font-size:10px;letter-spacing:1.8px;color:#6b83a3;font-weight:800}
+.student-count{background:#eaf2ff;color:#1268e5;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:800}
+.table-scroll{overflow-x:auto}
+.student-table{width:100%;border-collapse:collapse;min-width:620px}
+.student-table th{background:#f4f7fb;color:#52657f;font-size:12px;text-transform:uppercase;letter-spacing:.6px;padding:14px 12px;text-align:left}
+.student-table td{padding:14px 12px;border-bottom:1px solid #edf1f6;color:#253850;font-size:13px;font-weight:600}
+.student-table tbody tr:hover{background:#f8fbff}
+.status{display:inline-block;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+.status.active{background:#e9f8ef;color:#17854a}
+.status.completed{background:#eef2f7;color:#65758a}
+.contact-info-card{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important}
+.contact-icon{width:58px;height:58px;display:grid;place-items:center;background:#eaf2ff;color:#1268e5;border-radius:16px;font-size:25px;margin-bottom:18px}
+.contact-info-card h3{font-size:25px!important;margin:5px 0 22px!important}
+.info-list{width:100%;display:flex;flex-direction:column;gap:16px;margin-bottom:25px}
+.info-list div{display:flex;gap:12px;align-items:flex-start;color:#52657f;font-size:13px;line-height:1.55}
+.info-list i{color:#1268e5;width:18px;text-align:center;margin-top:2px}
+.contact-info-card button{border:0;border-radius:9px;background:#1268e5;color:#fff;padding:13px 20px;font-weight:800;cursor:pointer}
+@media(max-width:900px){.header-wrap{gap:15px!important;flex-wrap:wrap!important}.nav-brand img{width:135px!important}.header-wrap nav{order:3;width:100%}nav ul{justify-content:center!important;flex-wrap:wrap!important}}
+@media(max-width:600px){.nav-brand img{width:125px!important;height:48px!important}.student-table{min-width:560px}.table-title{align-items:flex-start;gap:10px}}
+</style>
+
+</head>
+
+<body>
+
+    <header id="header-site">
+
+        <div class="topbar">
+            <div class="topbar-inner">
+                <span><i class="fa-solid fa-phone"></i> +977-9841117580</span>
+                <span><i class="fa-solid fa-envelope"></i> info@letslearn.asia</span>
+                <span><i class="fa-solid fa-location-dot"></i> SRD Complex, New Plaza Rd, Kathmandu</span>
+                <span class="scholarship"><i class="fa-solid fa-graduation-cap"></i> Scholarship Open</span>
+            </div>
+        </div>
+        <div class="header-wrap">
+            <nav>
+<a class="nav-brand" href="#home" aria-label="LetsLearn Home"><img src="image/letslearn-new-logo (1).webp" alt="LetsLearn Logo"></a>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#after-see">After SEE</a></li>
+                    <li><a href="#courses">Courses</a></li>
+
+                    <li><a href="#events">Events</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-button">
+                <button type="button" id="openRegister">Register Now</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-site">
+
+        <section class="hero-site" id="home">
+            <div class="hero-wrap">
+                <div class="hero-contant">
+                    <div class="hero-eyebrow"><i class="fa-solid fa-circle-check"></i> Learn • Build • Grow</div><h1>Build Your <span>Future in IT</span></h1>
+                    <p>LetsLearn is the best computer training and IT training institute in Kathmandu, Nepal,
+                        established
+                        in 2015 with the goal of providing professional IT training and computer training in Kathmandu
+                        and
+                        various parts of Nepal. We are dedicated to educating and enhancing IT skills through rigorous
+                        computer training based on our latest computer courses & IT courses in Nepal.</p>
+                    <p>Get expert guidance from experienced trainers along with internship opportunities and verified
+                        certification to experience the best learning experience.</p>
+                    <div class="hero-button">
+                        <button type="button" id="heroRegister">Enroll Now <i class="fa-solid fa-arrow-right"></i></button>
+                        <a href="#courses" class="btn-outline">View All courses</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div><strong>10+</strong><span>Years Experience</span></div>
+                        <div><strong>5K+</strong><span>Students Trained</span></div>
+                        <div><strong>95%</strong><span>Career Focused</span></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./OIP.webp" alt="Students at LetsLearn IT Training Institute in Nepal">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-wrap">
+                <h1>Complete <span>IT Training in Nepal</span></h1>
+                <p>Learn from the latest courseware physically or online with expert mentorship, practical training to
+                    stand yourself in the front of your IT sector.</p>
+            </div>
+
+            <div class="about">
+                <strong>Why LetsLearn IT Training Institute?</strong>
+                <p>LetsLearn is committed to building "Future Ready" I.T. professionals. As one of the best IT
+                    training institute in Nepal, we provide professional computer classes for various types of IT
+                    courses with expert trainers providing hands-on training on each subject to prepare students for
+                    today's demanding tech industry. Some of our highlights for IT training are:</p>
+                <ul>
+                    <li>Practical, project-based learning approach</li>
+                    <li>Modern computer labs with the latest tools</li>
+                    <li>Industry-recognized courses and IT certifications</li>
+                    <li>Internship opportunities and career support</li>
+                </ul>
+            </div>
+
+            <div class="about-image">
+                <img src="image/lion-3576045_1280.jpg" alt="LetsLearn IT training students holding certificates">
+            </div>
+        </section>
+
+        <section class="service-section" id="courses">
+            <div class="service-wrap">
+                <h1>Our Popular Computer & IT Courses</h1>
+                <p>We provide in-person and online IT and computer class in Nepal taught by proficient
+                    educators. IT training classes at LetsLearn include Q&A sessions, weekly tests, projects
+                    with personal feedback to guide your IT & computer training development.</p>
+            </div>
+            <div class="image">
+                <div class="product-card">
+                    <img src="image/lion-3576045_1280.jpg" alt="Web Development course">
+                    <div class="product-details">
+                        <h3>Web Development</h3>
+                        <p>Build responsive websites with HTML, CSS, JavaScript and practical projects.</p><div class="course-meta"><span><i class="fa-regular fa-clock"></i> 3 Months</span><span class="price">Rs. 15,000</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="image/lion-3576045_1280.jpg" alt="Graphic Design course">
+                    <div class="product-details">
+                        <h3>Graphic Design</h3>
+                        <p>Master modern design workflows, branding, layouts and creative digital tools.</p><div class="course-meta"><span><i class="fa-regular fa-clock"></i> 3 Months</span><span class="price">Rs. 12,000</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="image/lion-3576045_1280.jpg" alt="Networking course">
+                    <div class="product-details">
+                        <h3>Networking</h3>
+                        <p>Learn networking fundamentals, troubleshooting and practical computer skills.</p><div class="course-meta"><span><i class="fa-regular fa-clock"></i> 3 Months</span><span class="price">Rs. 13,000</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+<section class="feature-strip">
+  <div class="feature-item"><i class="fa-solid fa-user-tie"></i><div><strong>Expert Mentors</strong><span>Industry-focused guidance</span></div></div>
+  <div class="feature-item"><i class="fa-solid fa-laptop-code"></i><div><strong>Practical Learning</strong><span>Projects, labs & assignments</span></div></div>
+  <div class="feature-item"><i class="fa-solid fa-certificate"></i><div><strong>Certification</strong><span>Skills you can showcase</span></div></div>
+  <div class="feature-item"><i class="fa-solid fa-briefcase"></i><div><strong>Career Support</strong><span>Internship & job guidance</span></div></div>
+</section>
+
+<section class="after-see-section" id="after-see">
+            <div class="simple-section-wrap">
+                <h2>After SEE <span>IT Programs</span></h2>
+                <p>Start your IT journey after SEE with practical and career-focused training.</p>
+                <div class="simple-cards">
+                    <div class="simple-card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Learn HTML, CSS, JavaScript and build real websites.</p></div>
+                    <div class="simple-card"><i class="fa-solid fa-palette"></i><h3>Graphic Design</h3><p>Build creative design skills using modern tools and techniques.</p></div>
+                    <div class="simple-card"><i class="fa-solid fa-network-wired"></i><h3>Networking</h3><p>Learn networking fundamentals and practical computer skills.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section" id="events">
+            <div class="simple-section-wrap">
+                <h2>Upcoming <span>Events</span></h2>
+                <p>Join our workshops, orientations, career sessions and practical IT events.</p>
+                <div class="simple-cards">
+                    <div class="simple-card"><i class="fa-solid fa-calendar-days"></i><h3>Course Orientation</h3><p>Get complete guidance about our courses and learning paths.</p></div>
+                    <div class="simple-card"><i class="fa-solid fa-laptop-code"></i><h3>IT Workshop</h3><p>Participate in hands-on sessions led by experienced trainers.</p></div>
+                    <div class="simple-card"><i class="fa-solid fa-briefcase"></i><h3>Career Session</h3><p>Learn about internships, skills and opportunities in IT.</p></div>
+                </div>
+            </div>
+        </section>
+
+
+
+<section class="contact-site" id="contact">
+  <div class="contact-container">
+    <div class="contact-heading">
+      <span>LETSLEARN STUDENT & CONTACT DESK</span>
+      <h2>Contact <strong>LetsLearn</strong></h2>
+      <p>Student information and institute contact details in one place.</p>
+    </div>
+    <div class="contact-content">
+      <div class="contact-card student-table-card">
+        <div class="table-title">
+          <div><span class="mini-label">STUDENT DIRECTORY</span><h3>Our Students</h3></div>
+          <span class="student-count">10 Students</span>
+        </div>
+        <div class="table-scroll">
+          <table class="student-table">
+            <thead><tr><th>S.N.</th><th>Student Name</th><th>Course</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>01</td><td>Aayush Sharma</td><td>Web Development</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>02</td><td>Prabin Thapa</td><td>Graphic Design</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>03</td><td>Samir Gurung</td><td>Networking</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>04</td><td>Rojina Shrestha</td><td>Web Development</td><td><span class="status completed">Completed</span></td></tr>
+              <tr><td>05</td><td>Nischal Karki</td><td>Graphic Design</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>06</td><td>Sneha Adhikari</td><td>Web Development</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>07</td><td>Bibek Rai</td><td>Networking</td><td><span class="status completed">Completed</span></td></tr>
+              <tr><td>08</td><td>Asmita KC</td><td>Graphic Design</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>09</td><td>Sujan Tamang</td><td>Web Development</td><td><span class="status active">Active</span></td></tr>
+              <tr><td>10</td><td>Manisha Bista</td><td>Networking</td><td><span class="status active">Active</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="contact-card contact-info-card">
+        <i class="fa-solid fa-headset contact-icon"></i>
+        <span class="mini-label">GET IN TOUCH</span>
+        <h3>LetsLearn Pvt. Ltd.</h3>
+        <div class="info-list">
+          <div><i class="fa-solid fa-location-dot"></i><span>SRD Complex, New Plaza Rd, Kathmandu 44600</span></div>
+          <div><i class="fa-solid fa-phone"></i><span>01-5923180<br>9841117580</span></div>
+          <div><i class="fa-solid fa-envelope"></i><span>info@letslearn.asia</span></div>
+        </div>
+        <button type="button" id="openContactRegister">Register Now <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <section class="conduct-section">
+            <div class="conduct-details">
+                <h1>
+                    Why Join LetsLearn
+                    <strong>IT Training & Computer Institute?</strong>
+                </h1>
+                <ul>
+                    <li>
+                        <strong>Project-Based Learning</strong>
+                        Work on projects and assignments based on real businesses.
+                    </li>
+                    <li>
+                        <strong>Recognized Certifications</strong>
+                        Get a physical technical skill certification that proves your IT skills.
+                    </li>
+                    <li>
+                        <strong>Expert Training and Mentorship</strong>
+                        Learn directly from experienced professionals with real industry knowledge.
+                    </li>
+                </ul>
+            </div>
+            <div class="conduct-image">
+                <img src="image/HD-wallpaper-virat-kohli-in-blue-jersey-virat-kohli-blue-indian-cricket-king-kohli-sports.jpg"
+                    alt="IT Training">
+            </div>
+        </section>
+
+    </main>
+
+    
+<section class="final-cta">
+  <div>
+    <span>START YOUR IT JOURNEY</span>
+    <h2>Ready to learn skills that matter?</h2>
+    <p>Choose a course, learn from experts and start building your career with confidence.</p>
+  </div>
+  <button type="button" id="finalRegister">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+</section>
+
+<footer class="site-footer">
+        <div class="footer-wrap">
+
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="image/letslearn-new-logo (1).webp" alt="LetsLearn logo">
+                </div>
+                <p>Welcome! Explore our IT courses and find the perfect path for you.</p>
+                <div class="footer-socials">
+                    <a href="" class="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="" class="twitter" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="" class="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="tiktok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="" class="whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="">Blogs</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="">Certificate Verification</a></li>
+                    <li><a href="">Internship & Job</a></li>
+                    <li><a href="">Placement</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li><span class="icon"><i class="fa-solid fa-phone"></i></span> 01-5923180, 9841117580</li>
+                    <li><span class="icon"><i class="fa-solid fa-envelope"></i></span> info@letslearn.asia</li>
+                    <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span> SRD Complex, New Plaza Rd, Kathmandu 44600</li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Subscribe Newsletter</h4>
+                <input type="email" placeholder="Enter Your Email">
+                <button>Subscribe</button>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            Copyright&copy; 2026 LetsLearn Pvt. Ltd.
+        </div>
+        <div class="map-frame">
+                        <iframe src="https://maps.google.com/maps?q=New%20Plaza%2C%20Kathmandu&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                    </div>
+    </footer>
+
+
+    <!-- Register Form Modal -->
+    <div class="register-modal" id="registerModal" aria-hidden="true">
+        <div class="register-modal-content" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+            <button type="button" class="register-close" id="closeRegister" aria-label="Close">&times;</button>
+
+            <h2 id="registerTitle">Register Now</h2>
+            <p class="register-subtitle">Fill in your details to register for our IT courses.</p>
+
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+
+                <select name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Networking">Networking</option>
+                </select>
+
+                <select name="mode" required>
+                    <option value="">Select Learning Mode</option>
+                    <option value="Physical">Physical</option>
+                    <option value="Online">Online</option>
+                </select>
+
+                <textarea name="message" placeholder="Message (optional)"></textarea>
+
+                <button type="submit" class="register-submit">Submit Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const registerModal = document.getElementById("registerModal");
+        const openRegister = document.getElementById("openRegister");
+        const closeRegister = document.getElementById("closeRegister");
+        const registerForm = document.getElementById("registerForm");
+
+        openRegister.addEventListener("click", () => {
+            registerModal.classList.add("active");
+            registerModal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        });
+
+        function closeRegisterModal() {
+            registerModal.classList.remove("active");
+            registerModal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+        }
+
+        closeRegister.addEventListener("click", closeRegisterModal);
+
+        registerModal.addEventListener("click", (event) => {
+            if (event.target === registerModal) {
+                closeRegisterModal();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && registerModal.classList.contains("active")) {
+                closeRegisterModal();
+            }
+        });
+
+        registerForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("Registration submitted successfully!");
+            registerForm.reset();
+            closeRegisterModal();
+        });
+    
+        const openContactRegister = document.getElementById("openContactRegister");
+        if (openContactRegister) {
+            openContactRegister.addEventListener("click", () => {
+                registerModal.classList.add("active");
+                registerModal.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+            });
+        }
+
+    </script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const open = document.getElementById("openRegister");
+  const hero = document.getElementById("heroRegister");
+  const finalBtn = document.getElementById("finalRegister");
+  const contact = document.getElementById("openContactRegister");
+  const modal = document.getElementById("registerModal");
+  const close = document.getElementById("closeRegister");
+  function show(){ if(modal){ modal.classList.add("active"); modal.setAttribute("aria-hidden","false"); } }
+  [open,hero,finalBtn,contact].forEach(btn => { if(btn) btn.addEventListener("click", show); });
+  if(close) close.addEventListener("click", ()=>{modal.classList.remove("active");modal.setAttribute("aria-hidden","true");});
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const contactSection = document.getElementById("contact");
+  const navLinks = document.querySelectorAll("nav a");
+
+  function hideContact() {
+    if (contactSection) contactSection.classList.remove("active");
+  }
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      const href = this.getAttribute("href") || "";
+
+      if (href === "#contact") {
+        e.preventDefault();
+        if (!contactSection) return;
+        contactSection.classList.add("active");
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        hideContact();
+      }
+    });
+  });
+
+  hideContact();
+});
+</script>
+
+</body>
+
+</html>
